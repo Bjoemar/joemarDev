@@ -509,7 +509,7 @@ svg {
 		top: 55%!important;
 	}
 
-	.dev_about p {
+	.inner_dev p {
 	    color: white;
 	    font-weight: 600;
 	    font-size: 0.8em;
@@ -531,7 +531,7 @@ svg {
 	.inner_dev {
 		left: 0;
 		width: 100%;
-		padding: 50px;
+		padding: 20px;
 		padding-top: 0;
 		z-index: 5;
 		top: 65%;
