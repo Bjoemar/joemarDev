@@ -518,6 +518,10 @@ svg {
 	}
 
 
+	.dev_title span {
+	    margin-left: -13px!important;
+	}
+
 	.dev_title small {
 	    color: #8d8d8d;
 	    margin-left: -10px;
@@ -536,7 +540,7 @@ svg {
 
 	.contact_about  {
 		padding: 20px!important;
-		top: 60%;
+		top: 60%!important;
 	}
 
 	.inner_dev p {
