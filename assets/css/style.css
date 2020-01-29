@@ -501,12 +501,15 @@ svg {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and  (max-width: 808px){
 
-	.contact_about {
+	.dev_skills  h1 {
+		font-size: 38px;
+	}
+	.dev_about {
 		padding: 20px!important;	
 		top: 55%!important;
 	}
 
-	.contact_about p {
+	.dev_about p {
 	    color: white;
 	    font-weight: 600;
 	    font-size: 0.8em;
@@ -531,7 +534,7 @@ svg {
 		padding: 50px;
 		padding-top: 0;
 		z-index: 5;
-		top: 50%;
+		top: 65%;
 	}
 	#mobile_button {
 		display: block;
@@ -624,9 +627,9 @@ svg {
 
 
 		.dev_wall {
-			overflow: hidden;
+			overflow: scroll;
 			width: 100%;
-			height: 100vh;
+			/*height: 100vh;*/
 			position: absolute;
 			z-index: 1;
 			left: 0;
