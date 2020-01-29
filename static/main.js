@@ -81,7 +81,7 @@ function getUrl(){
 			
 			setTimeout(function(){
 				$('#joemar_j').animate({
-					'opacity' : 1,
+					'opacity' : 0.5,
 				},3000);
 			},3500)
 
