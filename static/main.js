@@ -1,5 +1,5 @@
 var mob_nav = false;
-
+var clicked = false;
 $('#mobile_button').click(function(){
 	if (mob_nav) {
 		mob_nav = false;
@@ -76,6 +76,7 @@ function getUrl(){
 	$('.dev_navbar button').css('color' , '#545353');
 	var windowname = window.location.pathname;
 
+
 	if (windowname == '/home' || windowname == '/') {
 		$('#dev_container').load('home.html',function(){
 			
@@ -110,44 +111,57 @@ function getUrl(){
 		})
 	}
 
+	clicked = false;
+
 }
 
 
 
 $('#home_nav').click(function(){
 
+	if (!clicked) {
 
-	$('#dev_container').css({
-		'transform' : 'scale(0.8)',
-		'transition' : 'transform 0.5s',
-	});
-
-	$('#loading_pop').animate({
-		'left' : '0px',
-	},800)
-
-	setTimeout(function(){
-
-		history.pushState({}, null, '/home');
-		$('#home_nav').css('color' , '#08fdd8' );
-		getUrl();
-				setTimeout(function(){
-
-			$('#loading_pop').animate({
-				'left' : '-10000px',
-			},500)
-
-			$('#dev_container').css({
-				'transform' : 'scale(1)',
-				'transition' : 'transform 0.5s',
-			});
-				},1500)
-		
+		if (screen.width < 809) {
+			mob_nav = false;
+			$('.dev_navbar').animate({
+				'right' : '800px',
+			},500);
+		}
 
 
+		$('#dev_container').css({
+			'transform' : 'scale(0.8)',
+			'transition' : 'transform 0.5s',
+		});
 
-	},1800)
+		$('#loading_pop').animate({
+			'left' : '0px',
+		},800)
 
+		setTimeout(function(){
+
+			history.pushState({}, null, '/home');
+			$('#home_nav').css('color' , '#08fdd8' );
+			getUrl();
+					setTimeout(function(){
+
+				$('#loading_pop').animate({
+					'left' : '-10000px',
+				},500)
+
+				$('#dev_container').css({
+					'transform' : 'scale(1)',
+					'transition' : 'transform 0.5s',
+				});
+					},1500)
+			
+
+
+
+		},1800)
+		clicked = true;
+
+	}
 
 
 })
@@ -155,111 +169,145 @@ $('#home_nav').click(function(){
 
 $('#about_dev').click(function(){
 
+	if (!clicked) {
 
-	$('#dev_container').css({
-		'transform' : 'scale(0.8)',
-		'transition' : 'transform 0.5s',
-	});
+		if (screen.width < 809) {
+			mob_nav = false;
+			$('.dev_navbar').animate({
+				'right' : '800px',
+			},500);
+		}
 
-	$('#loading_pop').animate({
-		'left' : '0px',
-	},800)
 
-	setTimeout(function(){
+		$('#dev_container').css({
+			'transform' : 'scale(0.8)',
+			'transition' : 'transform 0.5s',
+		});
 
-		history.pushState({}, null, '/about');
-		$('#about_dev').css('color' , '#08fdd8' );
-		getUrl();
-		
+		$('#loading_pop').animate({
+			'left' : '0px',
+		},800)
 
 		setTimeout(function(){
 
-			$('#loading_pop').animate({
-				'left' : '-10000px',
-			},500)
+			history.pushState({}, null, '/about');
+			$('#about_dev').css('color' , '#08fdd8' );
+			getUrl();
+			
 
-			$('#dev_container').css({
-				'transform' : 'scale(1)',
-				'transition' : 'transform 0.5s',
-			});
-		},1500);		
-		
+			setTimeout(function(){
+
+				$('#loading_pop').animate({
+					'left' : '-10000px',
+				},500)
+
+				$('#dev_container').css({
+					'transform' : 'scale(1)',
+					'transition' : 'transform 0.5s',
+				});
+			},1500);		
+			
 
 
 
-	},1800)
+		},1800)
+		clicked = true;
+	}
 
 })
 
 $('#skills_dev').click(function(){
 
-	$('#dev_container').css({
-		'transform' : 'scale(0.8)',
-		'transition' : 'transform 0.5s',
-	});
+	if (!clicked) {
 
-	$('#loading_pop').animate({
-		'left' : '0px',
-	},800)
+		if (screen.width < 809) {
+			mob_nav = false;
+			$('.dev_navbar').animate({
+				'right' : '800px',
+			},500);
+		}
 
-	setTimeout(function(){
 
-		history.pushState({}, null, '/skills');
-		$('#skills_dev').css('color' , '#08fdd8' );
-		getUrl();
-		
+		$('#dev_container').css({
+			'transform' : 'scale(0.8)',
+			'transition' : 'transform 0.5s',
+		});
+
+		$('#loading_pop').animate({
+			'left' : '0px',
+		},800)
 
 		setTimeout(function(){
 
-			$('#loading_pop').animate({
-				'left' : '-10000px',
-			},500)
+			history.pushState({}, null, '/skills');
+			$('#skills_dev').css('color' , '#08fdd8' );
+			getUrl();
+			
 
-			$('#dev_container').css({
-				'transform' : 'scale(1)',
-				'transition' : 'transform 0.5s',
-			});
-		},1500);		
-		
+			setTimeout(function(){
+
+				$('#loading_pop').animate({
+					'left' : '-10000px',
+				},500)
+
+				$('#dev_container').css({
+					'transform' : 'scale(1)',
+					'transition' : 'transform 0.5s',
+				});
+			},1500);		
+			
 
 
 
-	},1800)
+		},1800)
+		clicked = true;
+	}
 })
 
 $('#work_dev').click(function(){
+	if (!clicked) {
 
-	$('#dev_container').css({
-		'transform' : 'scale(0.8)',
-		'transition' : 'transform 0.5s',
-	});
+		if (screen.width < 809) {
+			mob_nav = false;
+			$('.dev_navbar').animate({
+				'right' : '800px',
+			},500);
+		}
 
-	$('#loading_pop').animate({
-		'left' : '0px',
-	},800)
 
-	setTimeout(function(){
+		$('#dev_container').css({
+			'transform' : 'scale(0.8)',
+			'transition' : 'transform 0.5s',
+		});
 
-		history.pushState({}, null, '/work');
-		$('#work_dev').css('color' , '#08fdd8' );
-		getUrl();
-		
+		$('#loading_pop').animate({
+			'left' : '0px',
+		},800)
 
 		setTimeout(function(){
 
-			$('#loading_pop').animate({
-				'left' : '-10000px',
-			},500)
+			history.pushState({}, null, '/work');
+			$('#work_dev').css('color' , '#08fdd8' );
+			getUrl();
+			
 
-			$('#dev_container').css({
-				'transform' : 'scale(1)',
-				'transition' : 'transform 0.5s',
-			});
-		},1500);		
+			setTimeout(function(){
+
+				$('#loading_pop').animate({
+					'left' : '-10000px',
+				},500)
+
+				$('#dev_container').css({
+					'transform' : 'scale(1)',
+					'transition' : 'transform 0.5s',
+				});
+			},1500);		
 
 
 
-	},1800)
+		},1800)
+		clicked = true;
+	}
 })
 
 
@@ -267,37 +315,49 @@ $('#work_dev').click(function(){
 
 $('#contact_dev').click(function(){
 
-	$('#dev_container').css({
-		'transform' : 'scale(0.8)',
-		'transition' : 'transform 0.5s',
-	});
+	if (!clicked) {
+		if (screen.width < 809) {
+			mob_nav = false;
+			$('.dev_navbar').animate({
+				'right' : '800px',
+			},500);
+		}
 
-	$('#loading_pop').animate({
-		'left' : '0px',
-	},800)
 
-	setTimeout(function(){
+		$('#dev_container').css({
+			'transform' : 'scale(0.8)',
+			'transition' : 'transform 0.5s',
+		});
 
-		history.pushState({}, null, '/contact');
-		$('#contact_dev').css('color' , '#08fdd8' );
-		getUrl();
-		
+		$('#loading_pop').animate({
+			'left' : '0px',
+		},800)
 
 		setTimeout(function(){
 
-			$('#loading_pop').animate({
-				'left' : '-10000px',
-			},500)
+			history.pushState({}, null, '/contact');
+			$('#contact_dev').css('color' , '#08fdd8' );
+			getUrl();
+			
 
-			$('#dev_container').css({
-				'transform' : 'scale(1)',
-				'transition' : 'transform 0.5s',
-			});
-		},1500);		
+			setTimeout(function(){
+
+				$('#loading_pop').animate({
+					'left' : '-10000px',
+				},500)
+
+				$('#dev_container').css({
+					'transform' : 'scale(1)',
+					'transition' : 'transform 0.5s',
+				});
+			},1500);		
 
 
 
-	},1800)
+		},1800)
+		clicked = true;
+	}
+
 })
 
 $(document).on('focus' , '.dev_input input , .dev_input textarea', function(){
