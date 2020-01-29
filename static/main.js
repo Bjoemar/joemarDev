@@ -124,13 +124,15 @@ $('#home_nav').click(function(){
 
 	$('#loading_pop').animate({
 		'left' : '0px',
-	},800)
+	},800);
+
+	getUrl();
 
 	setTimeout(function(){
 
 		history.pushState({}, null, '/home');
 		$('#home_nav').css('color' , '#08fdd8' );
-		getUrl();
+		
 		
 
 		
@@ -164,12 +166,13 @@ $('#about_dev').click(function(){
 	$('#loading_pop').animate({
 		'left' : '0px',
 	},800)
+	getUrl();
 
 	setTimeout(function(){
 
 		history.pushState({}, null, '/about');
 		$('#about_dev').css('color' , '#08fdd8' );
-		getUrl();
+		
 		
 
 		
@@ -200,11 +203,13 @@ $('#skills_dev').click(function(){
 		'left' : '0px',
 	},800)
 
+	getUrl();
+
 	setTimeout(function(){
 
 		history.pushState({}, null, '/skills');
 		$('#skills_dev').css('color' , '#08fdd8' );
-		getUrl();
+		
 		
 
 		
@@ -234,11 +239,12 @@ $('#work_dev').click(function(){
 		'left' : '0px',
 	},800)
 
+	getUrl();
 	setTimeout(function(){
 
 		history.pushState({}, null, '/work');
 		$('#work_dev').css('color' , '#08fdd8' );
-		getUrl();
+		
 		
 
 		
@@ -270,11 +276,12 @@ $('#contact_dev').click(function(){
 		'left' : '0px',
 	},800)
 
+	getUrl();
 	setTimeout(function(){
 
 		history.pushState({}, null, '/contact');
 		$('#contact_dev').css('color' , '#08fdd8' );
-		getUrl();
+		
 		
 
 		
