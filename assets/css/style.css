@@ -48,6 +48,9 @@ body {
 	display: none;
 }
 
+#mobile_button:focus {
+	outline: none;
+}
 
 #dev_container {
 	position: absolute;
@@ -533,6 +536,7 @@ svg {
 
 	.contact_about  {
 		padding: 20px!important;
+		top: 60%;
 	}
 
 	.inner_dev p {
@@ -578,6 +582,7 @@ svg {
 
 		#dev_container {
 			height: 100vh;
+			overflow-x: hidden;
 		}
 
 
@@ -645,6 +650,7 @@ svg {
 		.inner_dev span  {
 			font-size: 0.9em!important;
 			line-height: 0.2;
+			margin-left: -10px;
 		}
 
 		.dev_title span img {
